@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+
+{% block title %}Extended Recipe{% endblock %}
+
+
+{% block head %}
+{{super()}}
+{% endblock %}
+
+
+{% block page_content %}
+<div class="page-header">
+   <h2><b>Recipe:</b> Potato Leek Soup</h2>
+   <h3><b>Source:</b> recipes.ch</h3>
+</div>
+
+
+<div class="media">
+   <div class="media-left">
+   <a href="#">
+       <img class="media-object" src="http://farm5.static.flickr.com/4100/4906465096_039209a45d.jpg" height="100" width="100">
+   </a>
+   </div>
+   <p class="media-body">
+       <div class="media-heading">
+           <h4>Potato Leek Soup</h4>
+       </div>
+       <p>here is a description of potato leek soup</p>
+       <p>here are some things you'll want to know:
+           <ul>
+               <li>time</li>
+               <li>complexity</li>
+            </ul>
+        </p>
+       <p><b>Ingredients:</b> <ul><li>potatoes</li><li>leeks</li><li>broth</li></ul></p>
+   </div>
+    <div class="col-md-5">
+        <div class="directions">
+            <p><b>Directions:</b> directions directions directions directions directions directions directions
+            directions directions directions directions directions directions</p>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<div class="page-header">
+    <h1>Recipes in the Database:</h1>
+</div>
+
+
+
+{% for recipe in alist %}
+    <li><a href="{{url_for('specific', aname=recipe) }}">{{ recipe }}</a></li>
+{% endfor %}
+
+
+
+{% endblock %}

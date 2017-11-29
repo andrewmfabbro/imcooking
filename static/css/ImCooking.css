@@ -1,0 +1,27 @@
+.navbar-inverse {
+    color: white;
+    border-color: black;
+    background-color: gray;
+}
+
+body {
+    background-color: honeydew;
+}
+
+
+.thumbnail {
+    height: 300px;
+}
+
+
+.control-label {
+    color: green;
+}
+
+.form-group{
+    border-color: black;
+}
+
+a:hover {
+    color: black;
+}

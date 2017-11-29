@@ -1,0 +1,8 @@
+@app.route('/new', methods=['GET', 'POST'])
+def new():
+    name = None
+    form = NameForm()
+    if form.validate_on_submit():
+        name = form.name.data
+        form.name.data = ''
+    return render_template('new.html', form=form, name=name)

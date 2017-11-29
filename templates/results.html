@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+    <div class="page-header">
+    <h1>Results</h1>
+    </div>
+<h2>You searched with the following parameters: </h2>
+<p>
+<ul>
+    <li>Name: {{title}}</li>
+    <li>Include: {{include}}</li>
+    <li>Exclude: {{exclude}}</li>
+</ul>
+<h2>Returned {{length}} results</h2>
+</p>
+
+<!--
+{% for recipe in alist %}
+    <li><a href="{{url_for('specific', aname=recipe) }}">{{ recipe }}</a></li>
+{% endfor %}
+!-->
+
+{% for i in range(0,length) %}
+    <div class="col-md-3">
+        <div class="thumbnail">
+            <img src="{{images[i]}}" alt="" height="100" width="100">
+            <div class="caption">
+                <h3><a href="{{ url_for('specific', aname=alist[i]) }}">{{alist[i]}}</a></h3>
+                <p>Contains: {{ingredients[i]}} </p>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+<hr>
+
+    <div class="col-md-12">
+        <p><a href="/recipe"> >>>Search Again </a></p>
+    </div>
+
+{% endblock %}

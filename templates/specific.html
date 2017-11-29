@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+    <style type="text/css">
+        .h1 { color: #336699; }
+    </style>
+<div class="page-header">
+
+    <div class="media">
+        <div class="media-left">
+            <a href="#">
+                <img class="media-object" src="{{ image }}" height="200" width="200">
+            </a>
+        </div>
+        <p class="media-body">
+        <div class="media-heading">
+            <h4> {{ title }} </h4>
+        </div>
+        <p><b>Ingredients:</b> {{ ingredients }} </p>
+        <p><a href=" {{source}} " target="_blank">Click here to go to the recipe.</a></p>
+        <p><a href="/results">  >>>Back   </a></p>
+    </div>
+
+
+
+
+
+
+</div>
+
+{% endblock %}
